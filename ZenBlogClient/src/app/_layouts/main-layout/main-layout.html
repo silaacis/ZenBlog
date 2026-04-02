@@ -1,0 +1,84 @@
+<div class="main-layout">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">ZenBlog</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a routerLink="" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+          <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+
+
+        </ul>
+
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+         <a><i class="mobile-nav-toggle d-xl-none bi bi-list" (click)="toggleMobileMenu()"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <router-outlet></router-outlet>
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="" class="logo d-flex align-items-center">
+            <span class="sitename">ZenBlog</span>
+          </a>
+          <div class="footer-contact pt-3" *ngFor="let item of contactInfos">
+            <p><strong>Address:</strong> <span> {{item.address}}</span></p>
+            <p><strong>Phone:</strong> <span> {{item.address}}</span></p>
+            <p><strong>Email:</strong> <span> {{item.email}}</span></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Social Networks</h4>
+          @for (item of socials; track $index) {
+          <div class="social-links d-flex ">
+            <a href="{{item.url}}"><i class="{{item.icon}} ms-2 mt-2"></i></a><p class="mt-2">{{item.title}}</p>
+          </div>}
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ZenBlog</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" (click)="scrollToTop($event)"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+

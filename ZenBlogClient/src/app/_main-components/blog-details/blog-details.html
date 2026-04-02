@@ -1,0 +1,125 @@
+<div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="container">
+
+              <article class="article">
+
+                <div class="post-img">
+                  <img src="{{blog.coverImage}}" alt="" class="img-fluid">
+                </div>
+
+                <h2 class="title">{{blog.title}}</h2>
+
+                <div class="meta-top">
+                  <ul>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">{{blog.user.firstName}} {{blog.user.lastName}}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">{{blog.createdAt | date}}</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">2 Comments</a></li>
+                  </ul>
+                </div><!-- End meta top -->
+
+                <div class="content">
+                  <img src="{{blog.blogImage}}" class="img-fluid" alt="">
+                  <p>
+                    {{blog.description}}
+                  </p>
+
+                </div><!-- End post content -->
+
+                <div class="meta-bottom">
+                  <i class="bi bi-folder"></i>
+                  <ul class="cats">
+                    <li><a href="#">{{blog.category.categoryName}}</a></li>
+                  </ul>
+
+                  <i class="bi bi-tags"></i>
+                  <ul class="tags">
+                    <li><a href="#">Creative</a></li>
+                    <li><a href="#">Tips</a></li>
+                    <li><a href="#">Marketing</a></li>
+                  </ul>
+                </div><!-- End meta bottom -->
+
+              </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+          <!-- Blog Comments Section -->
+          <section id="blog-comments" class="blog-comments section">
+
+            <div class="container">
+
+              <h4 class="comments-count">Comments</h4>
+
+              @for (item of blog.comments; track $index) {
+                <div id="comment-1" class="comment">
+                  <div class="d-flex">
+                    <div>
+                      <h5><a href="">{{item.firstName}} {{item.lastName}}</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">{{item.commentDate | date}}</time>
+                      <p>
+                        {{item.body}}
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End comment #1 -->
+              }
+            </div>
+
+          </section><!-- /Blog Comments Section -->
+
+          <!-- Comment Form Section -->
+          <comment-form></comment-form>
+          <!-- /Comment Form Section -->
+
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container">
+
+            <!-- Blog Author Widget -->
+            <div class="blog-author-widget widget-item">
+              <div class="d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center w-100">
+                  <img src="assets/img/blog/blog-author.jpg" class="rounded-circle flex-shrink-0" alt="">
+                  <div>
+                    <h4>Author: {{blog.user.firstName}} {{blog.user.lastName}}</h4>
+                  </div>
+                </div>
+                <p>
+                  Dijital dünyayı ve spor, teknoloji, eğitim gibi konuları tutkuyla takip eden bir blog yazarı. Güncel trendleri okuyucularına anlaşılır ve keyifli bir şekilde aktarmayı hedefliyor.
+                </p>
+              </div>
+
+            </div><!--/Blog Author Widget -->
+
+
+            <!-- Recent Posts Widget -->
+            <div class="recent-posts-widget widget-item">
+
+              <h3 class="widget-title">Recent Posts</h3>
+
+              @for (item of latestBlogs; track $index) {
+                <div class="post-item">
+                  <img src="{{item.coverImage}}" alt="" class="flex-shrink-0">
+                  <div>
+                    <h4><a [routerLink]="['/blogdetails/',item.id]" routerLinkActive="router-link-active" >{{item.title}}</a></h4>
+                    <time datetime="2020-01-01">{{item.createdAt | date}}</time>
+                  </div>
+                </div><!-- End recent post item-->
+              }
+            </div><!--/Recent Posts Widget -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>

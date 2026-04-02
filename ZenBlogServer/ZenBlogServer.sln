@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BF1CB8E0-8467-46A6-B61D-FDAE1C697ACC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FBFD66D2-A721-4C9D-9D55-63F37B3E4E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenBlog.Domain", "Core\ZenBlog.Domain\ZenBlog.Domain.csproj", "{E5F901EE-5642-4FB2-B05F-A486B23B720D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenBlog.Application", "Core\ZenBlog.Application\ZenBlog.Application.csproj", "{550B3829-13B1-408D-A41D-9E679857F67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenBlog.Persistence", "Infrastructure\ZenBlog.Persistence\ZenBlog.Persistence.csproj", "{F9D8EB50-4FF1-4D09-AAFD-D6F7510C4B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenBlog.Infrastructrure", "Infrastructrure\ZenBlog.Infrastructrure\ZenBlog.Infrastructrure.csproj", "{5BA47209-065A-4C9C-A9A6-8AEF41CCBAE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenBlog.API", "Presentation\ZenBlog.Api\ZenBlog.API.csproj", "{A04E842A-91FF-459E-99B5-14D7C80AE61F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5F901EE-5642-4FB2-B05F-A486B23B720D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F901EE-5642-4FB2-B05F-A486B23B720D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F901EE-5642-4FB2-B05F-A486B23B720D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F901EE-5642-4FB2-B05F-A486B23B720D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550B3829-13B1-408D-A41D-9E679857F67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550B3829-13B1-408D-A41D-9E679857F67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550B3829-13B1-408D-A41D-9E679857F67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550B3829-13B1-408D-A41D-9E679857F67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D8EB50-4FF1-4D09-AAFD-D6F7510C4B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D8EB50-4FF1-4D09-AAFD-D6F7510C4B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D8EB50-4FF1-4D09-AAFD-D6F7510C4B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D8EB50-4FF1-4D09-AAFD-D6F7510C4B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA47209-065A-4C9C-A9A6-8AEF41CCBAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA47209-065A-4C9C-A9A6-8AEF41CCBAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA47209-065A-4C9C-A9A6-8AEF41CCBAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA47209-065A-4C9C-A9A6-8AEF41CCBAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A04E842A-91FF-459E-99B5-14D7C80AE61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A04E842A-91FF-459E-99B5-14D7C80AE61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A04E842A-91FF-459E-99B5-14D7C80AE61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A04E842A-91FF-459E-99B5-14D7C80AE61F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5F901EE-5642-4FB2-B05F-A486B23B720D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{550B3829-13B1-408D-A41D-9E679857F67A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F9D8EB50-4FF1-4D09-AAFD-D6F7510C4B27} = {BF1CB8E0-8467-46A6-B61D-FDAE1C697ACC}
+		{5BA47209-065A-4C9C-A9A6-8AEF41CCBAE9} = {BF1CB8E0-8467-46A6-B61D-FDAE1C697ACC}
+		{A04E842A-91FF-459E-99B5-14D7C80AE61F} = {FBFD66D2-A721-4C9D-9D55-63F37B3E4E2A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8911B91-7A91-4BD6-8443-EDB93B22C9DD}
+	EndGlobalSection
+EndGlobal

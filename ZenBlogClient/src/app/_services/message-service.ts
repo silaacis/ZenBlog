@@ -1,0 +1,42 @@
+import { Injectable } from '@angular/core';
+import { Result } from '../_models/result';
+import { HttpClient } from '@angular/common/http';
+import { MessageDto } from '../_models/messageDto';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class MessageService {
+  constructor(private http:HttpClient){}
+
+  baseUrl = "https://localhost:7000/api/messages/"
+
+  create(model:MessageDto){
+    return this.http.post<Result<MessageDto>>(this.baseUrl, model);
+  }
+
+  getAll(){
+    return this.http.get<Result<MessageDto[]>>(this.baseUrl);
+  }
+
+  getReadMessages(){
+    return this.http.get<Result<MessageDto[]>>(this.baseUrl + "read");
+  }
+
+  getUnreadMessages(){
+    return this.http.get<Result<MessageDto[]>>(this.baseUrl + "unread");
+  }
+
+
+  update(model:MessageDto){
+    return this.http.put(this.baseUrl,model);
+  }
+
+  delete(id:string){
+    return this.http.delete(this.baseUrl+id);
+  }
+
+  getById(id:string){
+    return this.http.get<Result<MessageDto>>(this.baseUrl+id)
+  }
+}
