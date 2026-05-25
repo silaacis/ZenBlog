@@ -1,88 +1,183 @@
-# ZenBlog
+# 📚 ZenBlog
 
-**ZenBlog**, ASP.NET Core Web API ve Angular kullanılarak geliştirilmiş modern bir full-stack blog platformudur. Kullanıcıların blog yazılarını görüntüleyebildiği, admin paneli üzerinden içerik yönetiminin yapılabildiği bir sistemdir.
+Modern ve şık bir blog platformu. Yazılarınızı paylaşın, okuyucularınıza ulaşın ve içeriğinizi güvenli bir şekilde yönetin. Clean Architecture ilkelerine göre geliştirilmiş, hem masaüstü hem de mobil cihazlarda sorunsuz çalışan bir tam uygulamadır.
 
----
+## ✨ Proje Hakkında
 
-## 📋 Proje Hakkında
+ZenBlog, full-stack bir blog platformu olarak tasarlanmıştır. Minimalist ve kullanıcı dostu arayüzü sayesinde okuyucular blog yazılarını rahatça keşfedebilirler. Admin paneli ise blog yazarlarına içerik yönetimi için güçlü araçlar sunar.
 
-ZenBlog, sade ve kullanıcı dostu arayüzü ile blog içeriklerinin kolayca keşfedilmesini sağlar.  
-Frontend ve backend ayrı katmanlar halinde geliştirilmiş olup modern web geliştirme prensiplerine uygun şekilde tasarlanmıştır.
+### 👥 Kullanıcılar Ne Yapabilir?
+- 📖 Blog yazılarını rahatça okuyabilir
+- 🏷️ Kategorilere göre ilgi alanlarına uygun yazıları filtreleyebilir
+- 👨‍💻 Yazarlar hakkında bilgi alabilir
+- ⭐ Öne çıkan yazıları slider ile görüntüleyebilir
 
-Uygulamada kullanıcılar:
-- Blog yazılarını listeleyebilir  
-- Kategorilere göre filtreleyebilir  
-- Blog detaylarını görüntüleyebilir  
+### 🔐 Admin Paneli
+- ✍️ Yeni blog yazıları ekleyebilir
+- ✏️ Mevcut yazıları düzenleyebilir
+- 🗑️ Yazıları silebilir
+- 📂 Kategorileri yönetebilir
+- 🔒 Güvenli login sistemi ile hesap koruması
 
-Admin kullanıcılar ise:
-- Blog ve kategori yönetimi yapabilir  
-- Sisteme yeni içerikler ekleyebilir  
+## 🛠️ Teknoloji Stack'i
 
----
+**Frontend** (Arayüz):
+- Angular - Modern web framework
+- TypeScript - Tip güvenliği sağlayan dil
+- HTML / CSS - Sayfa yapısı ve stillemesi
+- Bootstrap - Responsive tasarım kütüphanesi
 
-## 🚀 Özellikler
+**Backend** (Sunucu Tarafı):
+- ASP.NET Core Web API - Güçlü ve hızlı API geliştirme
+- C# - Modern ve tip güvenli programlama dili
+- Entity Framework Core - Veritabanı yönetimi
 
-### 📰 Kullanıcı Tarafı
-- Blog listeleme  
-- Kategori bazlı filtreleme  
-- Blog detay sayfası  
-- Yazar bilgisi gösterimi  
-- Öne çıkan bloglar (slider)  
-- Responsive tasarım  
+**Güvenlik**:
+- JWT Authentication - Token tabanlı güvenli giriş sistemi
+- Authorization - Kullanıcı yetkilendirmesi
 
-### 🔐 Admin Paneli & Authentication
-- Token tabanlı authentication (JWT)  
-- Güvenli kullanıcı girişi  
-- Yetkilendirme (Authorization)  
-- Admin paneli  
-- Blog yönetimi (CRUD)
-  - Blog ekleme  
-  - Blog güncelleme  
-  - Blog silme  
-- Kategori yönetimi  
+**Mimari**:
+- Clean Architecture - Temiz ve bakım yapılabilir kod yapısı
+- RESTful API - Standart API tasarımı
 
----
+## 🚀 Hızlı Başlangıç
 
-## 🛠️ Kullanılan Teknolojiler
+### Gereksinimler
 
-### 🔹 Frontend
-- Angular  
-- TypeScript  
-- HTML / CSS  
-- Bootstrap  
+Başlamadan önce bilgisayarınızda yüklü olması gerekenler:
+- **.NET SDK** (v8 veya üzeri) - Backend çalıştırmak için
+- **Node.js** (v18 veya üzeri) - Frontend bağımlılıkları
+- **npm** (Node Package Manager) - Paket yöneticisi
+- **Angular CLI** - Angular uygulaması çalıştırmak için
 
-### 🔹 Backend
-- ASP.NET Core Web API  
-- C#  
-- Entity Framework Core  
-- JWT Authentication & Authorization  
+### Adım Adım Kurulum
 
-### 🔹 Mimari
-- Clean Architecture  
-- RESTful API  
-
----
-
-## ⚙️ Kurulum
-
-
+#### 1️⃣ Projeyi Bilgisayarınıza İndirin
 
 ```bash
-Backend
+git clone https://github.com/silaacis/ZenBlog
+cd ZenBlog
+```
+
+#### 2️⃣ Backend Kurulumu (ASP.NET Core)
+
+```bash
+# Backend klasörüne gidin
 cd ZenBlogServer
+
+# Bağımlılıkları geri yükleyin
 dotnet restore
+
+# Backend sunucusunu başlatın
 dotnet run
+```
 
+✅ Backend başarıyla çalışıyorsa şu mesajı göreceksiniz:
+```
+Backend çalışıyor: http://localhost:5000
+```
 
-Frontend
+#### 3️⃣ Frontend Kurulumu (Angular)
+
+Yeni bir terminal penceresi açıp:
+
+```bash
+# Ana proje klasörüne geri dönün
+cd ..
+
+# Frontend klasörüne gidin
 cd ZenBlogClient
+
+# Gerekli npm paketlerini yükleyin
 npm install
+
+# Frontend geliştirme sunucusunu başlatın
 ng serve
+```
 
-Uygulama
+✅ Frontend başarıyla çalışıyorsa şu mesajı göreceksiniz:
+```
+Frontend çalışıyor: http://localhost:4200
+```
 
-Frontend:
-👉 http://localhost:4200
+### 🌐 Uygulamaya Erişim
 
-Backend:
-👉 http://localhost:5000 (veya proje ayarına göre)
+Kurulum tamamlandıktan sonra:
+
+- **Ana Sayfa**: http://localhost:4200
+  - Blog yazılarını okuyabilir
+  - Kategorilere göre filtreleyebilirsiniz
+
+- **Admin Paneli**: http://localhost:4200/admin
+  - Kullanıcı adı ve şifre ile giriş yapın
+  - Blog ve kategori yönetimine erişin
+
+- **Backend API**: http://localhost:5000
+  - Tüm API endpoint'lerine buradan ulaşabilirsiniz
+
+---
+
+## 📁 Proje Yapısı
+
+```
+ZenBlog/
+├── ZenBlogServer/          # Backend (ASP.NET Core)
+│   ├── Controllers/        # API uç noktaları
+│   ├── Models/             # Veri modelleri
+│   ├── Services/           # İş mantığı
+│   └── appsettings.json    # Ayarlar
+│
+├── ZenBlogClient/          # Frontend (Angular)
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/ # Sayfa bileşenleri
+│   │   │   ├── services/   # API çağrıları
+│   │   │   └── models/     # Veri modelleri
+│   │   └── assets/         # Görseller
+│   └── package.json        # Bağımlılıklar
+│
+└── README.md               # Bu dosya
+```
+
+---
+
+## 🔐 Güvenlik Özellikleri
+
+- 🔒 **JWT Token Tabanlı Giriş** - Güvenli oturum yönetimi
+- 🛡️ **Role-Based Authorization** - Rol bazlı yetkilendirme
+- 🔑 **Şifrele Koruma** - Şifreler güvenli şekilde saklanır
+- ✅ **CORS Ayarları** - Frontend-Backend iletişimi güvenli
+
+---
+
+## 💡 Sık Sorulan Sorular
+
+**S: Frontend başlamıyor, port 4200 kullanımda diyor?**
+A: Başka bir uygulamayı port 4200'de kapatın veya şu komutla farklı portu kullanın:
+```bash
+ng serve --port 4201
+```
+
+**S: Backend'e bağlanamıyor, 5000 hatası alıyorum?**
+A: Backend'in çalışıp çalışmadığını kontrol edin. Terminal penceresinde `dotnet run` çıktısını kontrol edin.
+
+**S: Login yaparken hata alıyorum?**
+A: Verilen demo kullanıcı adı ve şifrenin doğru olduğundan emin olun. Backend'in `appsettings.json` dosyasında veritabanı bağlantısını kontrol edin.
+
+**S: Yazılar görünmüyor?**
+A: Backend'de veritabanı başlatılmış mı diye kontrol edin. Frontend'in Network sekmesinde API çağrılarını izleyin.
+
+---
+
+## 🤝 Geliştirmeye Katılın
+
+Projeyi iyileştirmek için:
+1. Fork yapın
+2. Feature branch'i oluşturun (`git checkout -b feature/YeniÖzellik`)
+3. Değişikliklerinizi commit edin (`git commit -m 'YeniÖzellik eklendi'`)
+4. Push yapın (`git push origin feature/YeniÖzellik`)
+5. Pull Request açın
+
+---
+
+**İyi okumalar ve başarılı yönetim! 🚀📚**
